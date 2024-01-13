@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS Animation</title>
+
+    <!-- 
+      자동으로 움직이는 애니메이션 효과
+      사용자가 어떠한 동작을 하지 않아도 미리 지정한 조건에 맞게 자동으로 반복하는 애니메이션 효과
+
+      @keyframes 애니메이션 세트 지정 : 애니메이션 시작과 끝을 등록하여 사용자 모션을 등록
+      0% ~ 100% : 0%는 시작, 100%는 끝 , 중간지점은 여러개 추가할 수 있습니다.
+
+      animation-name : 애니메이션 이름을 지정
+      animation-duration : 애니메이션 지속시간을 지정
+      animation-timing-function : 애니메이션 가속도를 지정
+      animation-delay : 애니메이션 지연시간을 지정
+      animation-iteration-count : 애니메이션 반복횟수를 지정
+      animation-play-state : 애니메이션 재생상태를 지정 (running, paused)
+
+      animation : 이름/진행시간/가속도/지연시간/반복횟수/방향/재생상태
+
+
+ -->
+
+    <style>
+      .animation {
+        width: 300px;
+        height: 300px;
+        background-color: yellow;
+
+        animation-name: changeWidth;
+        animation: changeWidth 3s linear 0s infinite alternate;
+      }
+
+      .animation:hover {
+        animation-play-state: paused;
+      }
+
+      @keyframes changeWidth {
+        from {
+          width: 300px;
+          transform: rotate(0deg);
+        }
+        to {
+          width: 600px;
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="animation"></div>
+  </body>
+</html>

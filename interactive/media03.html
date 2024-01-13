@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>미디어쿼리</title>
+
+    <style>
+      /* 미디어쿼리는 미디어쿼리 바깥쪽 영역에 있는 css 속성을 상속 받습니다.  */
+      .media {
+        width: 500px;
+        height: 500px;
+        background-color: yellow;
+        border: solid 10px red;
+      }
+
+      @media (min-width: 320px) and (max-width: 800px) {
+        .media {
+          width: 300px;
+          height: 300px;
+          border: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="media"></div>
+  </body>
+</html>

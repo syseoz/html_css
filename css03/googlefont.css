@@ -1,0 +1,7 @@
+@charser "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap");
+
+p#txt {
+  font-size: 100px;
+  font-family: "Noto Sans KR", sans-serif;
+}

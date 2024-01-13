@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex</title>
+    <!-- 
+
+       3.flex
+        전체 너비값의 비율 조절
+
+    -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      main {
+        width: 100%;
+        padding: 0px;
+      }
+
+      section {
+        width: 100%;
+        display: flex; /*블록요소의 특징 너비값 100%*/
+        background: lightcyan;
+      }
+      section article {
+        border: 1px solid red;
+        width: 100px;
+        background: aqua;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      section article:nth-of-type(1) {
+        flex: 1;
+      }
+      section article:nth-of-type(2) {
+        flex: 2;
+      }
+      section article:nth-of-type(3) {
+        flex: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section>
+        <article>flex grow</article>
+        <article>flex grow</article>
+        <article>flex grow</article>
+      </section>
+    </main>
+  </body>
+</html>

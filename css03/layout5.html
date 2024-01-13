@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>레이아웃에 영향을 미치는 속성 - float</title>
+
+    <!-- float은 선택된 요소를 왼쪽에서부터 또는 오른쪽에서부터 정렬시키고자 할 때 사용되는 CSS 속성입니다. 
+      속성값으로는 보통 left, right이 사용됩니다. -->
+    <style>
+      /* .left {
+        width: 300px;
+        height: 300px;
+        background-color: yellow;
+        float: left;
+      }
+
+      .right {
+        width: 300px;
+        height: 400px;
+        background-color: blue;
+        float: right;
+      }
+*/
+      header {
+        width: 100%;
+        height: 100px;
+        background-color: yellow;
+      }
+
+      #left {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        float: left;
+      }
+
+      main {
+        width: 300px;
+        height: 200px;
+        background-color: green;
+        float: left;
+      }
+
+      #right {
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+        float: right;
+      }
+
+      footer {
+        width: 100%;
+        height: 100px;
+        background-color: black;
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 부모의 크기 안에서 float 부모의 크기가 작으면 틀어진다 -->
+    <!-- <div style="width: 700px"> -->
+    <!-- <div class="left"></div>
+    <div class="right"></div> -->
+    <!-- </div> -->
+    <!-- 전통적인 웹사이트 레이아웃 구조 만들기 -->
+
+    <header></header>
+
+    <article id="left"></article>
+    <main></main>
+    <article id="right"></article>
+
+    <footer></footer>
+  </body>
+</html>

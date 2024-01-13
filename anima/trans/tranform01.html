@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Transform</title>
+    <!-- 
+  2D 변형 함수
+transform: 
+scale(2,3) : width, height 만큼 확대 ,음수 가능 (축소)
+skew(30deg, 30deg) : x축, y축 기준으로 각도만큼 기울임 3차원
+translate(100px, 200px) : x축, y축 만큼 이동
+rotate(45deg) : 각도 만큼 회전
+
+
+3D 변형 함수
+transform:
+rotateX(45deg), rotateY() : x 또는 y축으로 입체감있게 회전
+translateZ(45deg) : z축으로 입체감있게 회전
+
+-->
+    <style>
+
+      section{
+        width: 200px;
+        height: 200px;
+        border : 1px solid #000;
+        float: left;
+        margin: 50px;
+        perspective: 400px;
+      }
+
+      section .transform {
+        width: 100%;
+        height: 100%;
+        background-color: blue;
+
+
+        opacity: 0.6;
+
+        transform: rotate(45deg);
+ 
+
+        /*transform: rotate(45deg);*/
+        /*transform: scale(2,3);*/ /*width, height*/
+        /*transform: translate(100px, 200px);*/
+        /*  transform: skew(
+          30deg,
+          30deg
+        ); /*x축, y축 기준으로 각도만큼 기울임 3차원*/
+        /*마지막에 적용된 transform만 적용된다.*/
+
+        /*
+            
+        -webkit-transform: skew(30deg, 30deg); /*크롬
+        -moz-transform: skew(30deg, 30deg); /*파이어폭스
+        -o-transform: skew(30deg, 30deg);  /*오페라
+        */
+      }
+    </style>
+  </head>
+  <body>
+    <section
+      <div class="transform"></div>
+    </section>
+  </div>
+  </body>
+</html>
+
+<!-- 
+
+.transition{
+  transform: translate(100px, 100px); x축, y축 만큼 이동
+  transform: rotate(45deg); 각도 만큼 회전
+  transform: scale(2, 2); width, height 만큼 확대 ,음수 가능 (축소)
+  transform: skew(30deg, 30deg); x축, y축 기준으로 각도만큼 기울임 3차원
+}
+-->

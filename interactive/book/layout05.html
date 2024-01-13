@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex-grow ,flex-shrink</title>
+    <!-- 
+      1. 
+       flex-grow전체 영역의 크기를 조절하지 않고 남은 부모 영역의 크기를 똑같이 늘어남
+       요소 안쪽 여백 확대하기
+        flex-grow: 1;
+
+       2. flex-shrink: 1; /*1배 비율로*/.*/
+       요소 안쪽 여백 축소하기
+
+       3.flex
+        전체 너비값의 비율 조절
+        flex
+
+
+
+    -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      main {
+        width: 100%;
+        padding: 0px;
+      }
+
+      section {
+        width: 100%;
+        display: flex; /*블록요소의 특징 너비값 100%*/
+        background: lightcyan;
+      }
+      section article {
+        border: 1px solid red;
+        width: 100px;
+        background: aqua;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* flex 의 order 속성을 화영하면 배치 순서를 변경할 수 있다.*/
+      /* flex grow  남은 부모 영역의 크기를 똑같이 늘어남*/
+      section article:nth-of-type(1) {
+        flex-grow: 1; /*2배 비율로*/
+      }
+      section article:nth-of-type(2) {
+        flex-grow: 2;
+      }
+      section article:nth-of-type(3) {
+        flex-grow: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section>
+        <article>flex grow</article>
+        <article>flex grow</article>
+        <article>flex grow</article>
+      </section>
+    </main>
+  </body>
+</html>
