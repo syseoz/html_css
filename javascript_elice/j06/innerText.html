@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul class="btns">
+      <li class="on">button1</li>
+      <li>button2</li>
+      <li>button3</li>
+    </ul>
+
+    <section>
+      <article class="on">BOX1</article>
+      <article>BOX2</article>
+      <article>BOX3</article>
+    </section>
+
+    <ul class="list">
+      <li><a href="#">item1</a></li>
+      <li><a href="#">item2</a></li>
+      <li><a href="#">item3</a></li>
+      <li><a href="#">item4</a></li>
+    </ul>
+  </body>
+  <!-- 반복되는 요소에 이벤트한꺼번에 연결하기 -->
+  <script src="./codePackaging.js"></script>
+  <script>
+    const list = document.querySelectorAll(".list li");
+    for (let i = 0; i < list.length; i++) {
+      list[i].addEventListener("click", function (e) {
+        e.preventDefault();
+        console.log(this.innerText);
+      });
+    }
+  </script>
+</html>

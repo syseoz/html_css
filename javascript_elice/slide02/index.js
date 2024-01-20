@@ -138,5 +138,16 @@ document.querySelector(".left-arrow").onclick = function () {
   );
   preSlide.classList.add("active");
 };
+//hideBtn.addEventListener("click", function () {
+  //  if (hideBtn.textContent === "숨기기") {
+    //    hideBtn.textContent = "보이기";
+      //  document.querySelector(".box").style.display = "none";
+    //} else {
+      //  hideBtn.textContent = "숨기기";
+        //document.querySelector(".box").style.display = "block";
+    //}
 
-// postgresql datetime 2022-01-01 00:00:00 -> 2022-01-01 date타입 변환 하는 쿼리
+//document.getElementById
+//mouse.addEventListener("mouseenter", function () {
+    //mouse.style.backgroundColor = "red";
+}
